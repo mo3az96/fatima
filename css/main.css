@@ -507,7 +507,7 @@ html[dir='rtl'] .newsletter-button {
   top: 100%;
   background-color: rgba(3, 3, 0, 0.92);
   padding: 12px 11px 12px;
-  width: 145px;
+  min-width: 145px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   visibility: hidden;
@@ -619,6 +619,10 @@ html[dir='rtl'] .sub-ul {
 .main-slider .slide-head:nth-of-type(2) {
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+}
+
+html[dir='rtl'] .main-slider .slide-head {
+  margin-top: 15px;
 }
 
 @media (max-width: 767px) {
@@ -1459,7 +1463,7 @@ html[dir='ltr'] .mo-account .account-anchor:after {
   top: 100%;
   background-color: rgba(3, 3, 0, 0.92);
   padding: 12px 11px 12px;
-  width: 120px;
+  min-width: 120px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   visibility: hidden;
@@ -1477,6 +1481,7 @@ html[dir='rtl'] .mo-account .drop-ul {
 
 .mo-account .drop-a {
   padding: 0 7px;
+  white-space: nowrap;
   display: block;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
