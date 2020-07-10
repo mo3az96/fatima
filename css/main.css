@@ -1913,6 +1913,109 @@ html[dir='rtl'] .social-link:last-of-type {
   }
 }
 
+.chat {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: #030300;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 110px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html[dir='ltr'] .chat {
+  right: 23px;
+}
+
+@media (max-width: 992px) {
+  html[dir='ltr'] .chat {
+    right: 10px;
+  }
+}
+
+html[dir='rtl'] .chat {
+  left: 23px;
+}
+
+@media (max-width: 992px) {
+  html[dir='rtl'] .chat {
+    left: 10px;
+  }
+}
+
+.chat:hover {
+  background-color: rgba(3, 3, 0, 0.85);
+}
+
+@media (max-width: 992px) {
+  .chat {
+    bottom: 72px;
+    width: 56px;
+    height: 56px;
+  }
+  .chat img {
+    width: 28px;
+  }
+}
+
+.whats {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: #3fbd50;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  font-size: 48px;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html[dir='ltr'] .whats {
+  right: 23px;
+}
+
+@media (max-width: 992px) {
+  html[dir='ltr'] .whats {
+    right: 10px;
+  }
+}
+
+html[dir='rtl'] .whats {
+  left: 23px;
+}
+
+@media (max-width: 992px) {
+  html[dir='rtl'] .whats {
+    left: 10px;
+  }
+}
+
+.whats:hover {
+  background-color: rgba(63, 189, 80, 0.85);
+  color: #fff;
+}
+
+.whats:focus {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .whats {
+    bottom: 10px;
+    width: 56px;
+    height: 56px;
+    font-size: 38.5px;
+  }
+}
+
 .close-menu {
   position: absolute;
   top: 20px;
