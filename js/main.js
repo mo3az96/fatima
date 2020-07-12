@@ -1,11 +1,41 @@
 $(window).on('load', function () {
     $('.pre-loader').fadeOut("500", function () {
         $(this).remove();
-        $("body").removeClass("overflow");
+        $(".mo-modal-overlay").fadeIn(500)
+        $(".mo-modal").addClass("mo-modal-in");
     });
 });
 $(document).ready(function () {
     new WOW().init();
+    $('.mo-modal-overlay').click(function () {
+        $(".mo-modal-overlay").fadeOut(400);
+        $(".mo-modal").removeClass("mo-modal-in");
+        $(".mo-bannerpop-overlay").fadeIn(500)
+        $(".mo-bannerpop").addClass("mo-bannerpop-in");
+    });
+    $('.mo-modal').click(function (e) {
+        e.stopPropagation();
+    });
+    $('.mo-modal-close').click(function () {
+        $(".mo-modal-overlay").fadeOut(400);
+        $(".mo-modal").removeClass("mo-modal-in");
+        $(".mo-bannerpop-overlay").fadeIn(500)
+        $(".mo-bannerpop").addClass("mo-bannerpop-in");
+    });
+
+    $('.mo-bannerpop-overlay').click(function () {
+        $(".mo-bannerpop-overlay").fadeOut(400);
+        $(".mo-bannerpop").removeClass("mo-bannerpop-in");
+        $("body").removeClass("overflow")
+    });
+    $('.mo-bannerpop').click(function (e) {
+        e.stopPropagation();
+    });
+    $('.mo-bannerpop-close').click(function () {
+        $(".mo-bannerpop-overlay").fadeOut(400);
+        $(".mo-bannerpop").removeClass("mo-bannerpop-in");
+        $("body").removeClass("overflow")
+    });
     //////////** main slider **//////////
     var mainswiper = new Swiper('.main-slider .swiper-container', {
         spaceBetween: 10,
